@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #1a1a2e;
+}
+
+.difficulty-container {
+    margin-bottom: 20px;
+}
+
+.difficulty-container button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #3498db;
+    color: white;
+}
+
+.difficulty-container button:hover {
+    background-color: #2980b9;
+}
+
+.attempts-container {
+    color: white;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.game-container {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(4, 100px);
+    gap: 10px;
+    justify-content: center;
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    background-color: #16213e;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    background-image: url('https://www.1001fonts.com/download/font/question-mark.thumb.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.card.flipped {
+    background-color: #0f3460;
+    background-image: none;
+}
+
+.card.mismatch {
+    background-color: #e74c3c;
+}
+
+.card.matched {
+    background-color: #2ecc71;
+    background-image: none;
+}
